@@ -16,7 +16,7 @@ module.exports = {
       const { default: Replicate } = await import('replicate');
 
       const replicate = new Replicate({
-        auth: REPLICATE_API_KEY,
+        auth: process.env.REPLICATE_API,
       });
 
       const prompt = interaction.options.getString('prompt');
