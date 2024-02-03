@@ -26,19 +26,19 @@ module.exports = {
 
       const row = new ActionRowBuilder().addComponents(
         new ButtonBuilder()
-          .setLabel(`Download`)
+          .setLabel(`Загрузить`)
           .setStyle(ButtonStyle.Link)
           .setURL(`${output[0]}`)
           .setEmoji('1101133529607327764')
       );
 
       const resultEmbed = new EmbedBuilder()
-        .setTitle('Image Generated')
-        .addFields({ name: 'Prompt', value: prompt })
+        .setTitle('Изображение создано!')
+        .addFields({ name: 'Запрос', value: prompt })
         .setImage(output[0])
-        .setColor('#44a3e3')
+        .setColor('BLURPLE')
         .setFooter({
-          text: `Requested by ${interaction.user.username}`,
+          text: `Запросил ${interaction.user.username}`,
           iconURL: interaction.user.displayAvatarURL({ dynamic: true }),
         });
 
@@ -48,9 +48,9 @@ module.exports = {
       });
     } catch (error) {
       const errEmbed = new EmbedBuilder()
-        .setTitle('An error occurred')
+        .setTitle('Произошла ошибка')
         .setDescription('```' + error + '```')
-        .setColor(0xe32424);
+        .setColor('RED');
 
       interaction.editReply({ embeds: [errEmbed] });
     }
@@ -58,17 +58,17 @@ module.exports = {
 
   data: {
     name: 'imagine',
-    description: 'Generate an image using a prompt.',
+    description: 'Генирация изображение за запросом.',
     options: [
       {
         name: 'prompt',
-        description: 'Enter your prompt',
+        description: 'Введите запрос.',
         type: ApplicationCommandOptionType.String,
         required: true,
       },
       {
         name: 'model',
-        description: 'The image model',
+        description: 'Модель изображения.',
         type: ApplicationCommandOptionType.String,
         choices: models,
         required: false,
