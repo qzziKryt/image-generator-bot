@@ -1,4 +1,4 @@
 {
-  "BOT_TOKEN": "",
-  "REPLICATE_API_KEY": ""
+  "BOT_TOKEN": "process.env.TOKEN_",
+  "REPLICATE_API_KEY": "process.env.API_"
 }
