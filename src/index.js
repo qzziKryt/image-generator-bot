@@ -14,4 +14,4 @@ new CommandHandler({
   eventsPath: path.join(__dirname, 'events'),
 });
 
-client.login(BOT_TOKEN);
+client.login(process.env.TOKEN);
