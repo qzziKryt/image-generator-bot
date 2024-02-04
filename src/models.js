@@ -5,7 +5,7 @@ module.exports = [
       'stability-ai/stable-diffusion:27b93a2413e7f36cd83da926f3656280b2931564ff050bf9575f1fdf9bcd7478',
   },
   {
-    name: 'Openjourney (Midjourney style)',
+    name: 'Openjourney (Nsfw on)',
     value:
       'prompthero/openjourney:9936c2001faa2194a261c01381f90e65261879985476014a0a37a334593a05eb',
   },
