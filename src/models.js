@@ -21,4 +21,8 @@ module.exports = [
     name: 'Waifu Diffusion',
     value: 'cjwbw/waifu-diffusion:25d2f75ecda0c0bed34c806b7b70319a53a1bccad3ade1a7496524f013f48983',
   },
+  {
+    name: 'Ghostmix-V2',
+    value: 'pagebrain/ghostmix-v2:b4a3dc2448baeb99159dacc9ad2c1775286385f8c2a104172cbe6d84d9cb72ec',
+  },
 ];
